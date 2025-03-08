@@ -20,7 +20,7 @@ Ce projet a pour objectif de permettre aux utilisateurs :
 - De créer, modifier, supprimer et marquer comme terminé des tâches
 - De filtrer les tâches.
 - D'utiliser une API pour récuperer les tâches.
-- 
+  
 **Note** : Le projet est fonctionnel à 100%, si vous rencontrez des erreurs, veuillez me contacter.
 
 ---
