@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Détails de la tâche - TodoApp{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1 class="my-4">Détails de la tâche</h1>
+
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{ task.title }}</h5>
+                <p class="card-text">{{ task.description }}</p>
+                <p class="card-text">
+                    <strong>Statut :</strong>
+                    {% if task.status %}
+                        <span class="badge bg-success">Terminée</span>
+                    {% else %}
+                        <span class="badge bg-warning">En cours</span>
+                    {% endif %}
+                </p>
+                <p class="card-text">
+                    <strong>Créée le :</strong> {{ task.createdAt ? task.createdAt|date('d/m/Y H:i') : '' }}
+                </p>
+                <a href="{{ path('app_task_edit', {'id': task.id}) }}" class="btn btn-primary">Modifier</a>
+            </div>
+        </div>
+
+        <a href="{{ path('app_task_index') }}" class="btn btn-secondary mt-3">Retour à la liste</a>
+    </div>
+{% endblock %}
